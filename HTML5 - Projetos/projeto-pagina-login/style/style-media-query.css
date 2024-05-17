@@ -1,0 +1,57 @@
+@charset "UTF-8";
+:root{
+    --cor1: #49a09d;
+    --cor2: #5f2c82;
+}
+@media screen and (max-width: 768px){
+    body{
+        background-color: var(--cor2);
+    }
+}
+@media screen and (min-width: 768px) and (max-width:992px){
+    /* VERSÃO DE TABLET */
+    body{
+        background-image: linear-gradient(to top, var(--cor1), var(--cor2));
+    }
+    #login{
+        width: 90vw;
+        height: 270px;
+    }
+    #imagem{
+        background-image: url(../images/desing-patterns.jpg);
+        background-position: left center;
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+    #formulario{
+        float: right;
+        width: 70%;
+    }
+}
+@media screen and (min-width:992px){
+    body{
+        background-image: linear-gradient(to top, var(--cor1), var(--cor2));
+    }
+    #login{
+        width: 992px;
+        height: 310px;
+    }
+    #imagem{
+        background-image: url(../images/desing-patterns.jpg);
+        background-position: right center;
+        float: right;
+        width: 40%;
+        height: 100%;
+    }
+    #formulario{
+        float: left;
+        width: 50%;
+   }
+   #formulario > h1{
+    font-size: 2em;
+}
+#formulario > p{
+    font-size: 01.2em;
+}
+}

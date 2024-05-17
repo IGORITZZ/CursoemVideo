@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style-media-query.css">
+</head>
+<body>
+    <main>
+        <section id="login">
+            <div id="imagem">
+
+            </div>
+            <div id="formulario">
+                <h1>Login</h1>
+                <p>Seja bem-vindo(a), faça login ou crie seu cadastro</p>
+                <form action="login.php" method="post" autocomplete="off">
+                    <div class="campo">
+                        <span class="material-symbols-outlined">input</span>
+                        <label for="ilogin">
+                            <input type="email" name="login" id="ilogin" placeholder="Seu e-mail" autocomplete="email" required>
+                        </label>
+                    </div>
+                    <div class="campo">
+                        <span class="material-symbols-outlined">key</span>
+                        <label for="isenha">
+                            <input type="password" name="senha" id="isenha" placeholder="senha" autocomplete="current-password" required minlength="6">
+                        </label>
+                    </div>
+                    <input type="submit" value="Entrar">
+                    <a class="botao" href="esqueci.html">Esqeuceu a senha?<span class="material-symbols-outlined">lock_reset</span></a>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
