@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegando pelo iframe</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #tela{
+            width: 95vw;
+            /* vw (view-width ou largura da view/tela), uma medida que se trata da porcentagem em relação a largura da tela */
+            height: 500px;
+            border: 2px solid black;
+            border-radius: 10px;
+            display: block;
+            /* o elemento em questão muda para ser do tipo block e permitir centralização por margin */
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nabegando pelo iframe</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora nesciunt ducimus recusandae, voluptate pariatur est esse excepturi, neque deserunt corrupti sed ipsum, voluptatibus vitae blanditiis laudantium reiciendis optio itaque nemo? </p>
+    <ul>
+        <li><a href="paginas-extras/pagina001.html" target="frame">Página 1</a></li>
+        <!-- esse target endereça a abertura da pagina para o elemento que leva o nome "frame" -->
+        <li><a href="paginas-extras/pagina002.html" target="frame">Página 2</a></li>
+        <!-- esse target endereça a abertura da pagina para o elemento que leva o nome "frame" -->
+        <li><a href="paginas-extras/pagina003.html" target="frame">Página 3</a></li>
+        <!-- esse target endereça a abertura da pagina para o elemento que leva o nome "frame" -->
+    </ul>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, quaerat. Beatae voluptate voluptates repudiandae itaque dolore eaque, ad pariatur ipsum in quisquam, incidunt asperiores earum soluta aliquid esse aliquam assumenda. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur mollitia quaerat laudantium ex, sint quidem dolorem earum aut dolore explicabo autem omnis iure soluta delectus totam fugit eos vel voluptatem.</p>
+    <iframe name="frame" id="tela" srcdoc="<h1>Conteudo dentro do Iframe</h1>"></iframe>
+    <!-- propriendade name="frame" da o nome, com um peso maior servindo de identificação para outros elemento, nesse caso o target -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, repudiandae, distinctio facilis voluptas reprehenderit, provident sint nostrum nemo at dolorem facere libero pariatur rem fugiat nam autem voluptate error officia! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus officiis praesentium quam, esse harum rerum voluptatibus tempore illum. Reiciendis vel optio commodi magnam doloribus, eum dolores accusamus odio aut et.</p>
+</body>
+</html>

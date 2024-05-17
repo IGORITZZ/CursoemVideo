@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 08</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <p>
+                <label for="in1"> Numero
+                    <input type="number" name="n1" id="in1" min="0" max="10" required value="0"
+                        oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+                        <!-- O conceito de oninput, é usado de uma melhor forma com JavaScript, mas vamos entender um pouco-->
+                        <!-- 
+                            isoma.innerHTML tudo que estiver dentro do HTML correspondente ao isoma
+                            = vai receber 
+                            Number(in1.value) + Number(in2.value) o valor(value) in1 + o valor (value) in2
+                            assim toda vez que aumentarmos e diminuirmois o valor de in1 ou in2 sera feito uma soma, e o resultado sera automaticamente inserido no que corresponder ao "isoma"
+                         -->
+                </label>
+            </p>
+            <p>
+                <label for="in2"> Numero
+                    <input type="number" name="n2" id="in2" min="0" max="10" required value="0"
+                        oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+                </label>
+            </p>
+            <p>
+                <label for="isoma"> Total:
+                    <output name="soma" id="isoma">0</output>
+                    <!-- output serve para inserir a saida do oninput -->
+                    <!-- sendo assim o oninput serve como a entrada dos dados e output é a saida (resultado) da operação, ou ação -->
+                </label>
+            </p>
+            <p>
+                <input type="submit" value="Eviar">
+                <input type="reset" value="Apagar">
+            </p>
+        </fieldset>
+    </form>
+
+    <script>
+        function calcIano(){
+            let atual = new Date().getUTCFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        } 
+    </script>
+</body>
+</html>

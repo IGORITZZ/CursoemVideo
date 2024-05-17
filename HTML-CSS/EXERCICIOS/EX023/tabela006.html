@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 06 - Resposivas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 8px;
+        }
+        tr:nth-child(even){
+            background-color: rgb(228, 228, 228);
+        }
+        #conteiner{
+            /* a <div> demos um id, e assim vamos aprender uma nova propriedade */
+            /* overflow, quer dizer "oque transborda", e nesse exercicio a tabela esta trabordando para as laterias */
+            /* esse atributo possui tres opções: overflow, overflow-y e overflox-x, e como transborar para as laterais vamos configurar somente o eixo-x */
+            /* agora sobre os valores, os 3 principais:display:
+                HIDDEN: não faz mudanças vizuais.
+                SCROLL: no eixo selecionado, cria-se uma barra de rolagem, porém essa barra sempre vai acompanhar o objeto idependente do tamanho.
+                AUTO: define automaticamente oque a tabela vai precisar, vai ficar sem nehuma mudança visual e quando transbordar, ira criar a barra de rolagem no eixo selecionado.
+            */
+            /* com esse atributo trazemos mudanças vizuais para a tabela, de maneia que não afete a estrutura principal da pagina */
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas Responsivas</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, necessitatibus perferendis! Aliquam amet assumenda omnis quam culpa unde in mollitia necessitatibus ipsa corporis labore earum, illo cumque reiciendis doloribus vitae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit quisquam numquam distinctio consequuntur architecto, quos suscipit aperiam quam excepturi aliquam fugiat dolorem corrupti, repellat culpa tempora fuga? Facilis, pariatur.</p>
+    <div id="conteiner">
+        <!-- para corrigirmos um problema aonde o tamanho da tabela "escapa" para as laterais ta tela, e isso ocorre muito em celulares, envelopamos a <table> toda em uma <div> -->
+        <table>
+            <caption>Tabela Responsiva</caption>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>JAN</th>
+                    <th>FEV</th>
+                    <th>MAR</th>
+                    <th>ABR</th>
+                    <th>MAI</th>
+                    <th>JUN</th>
+                    <th>JUL</th>
+                    <th>AGO</th>
+                    <th>SET</th>
+                    <th>OUT</th>
+                    <th>NOV</th>
+                    <th>DEZ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Amazon Doc</td>
+                    <td>01</td>
+                    <td>223</td>
+                    <td>56</td>
+                    <td>5</td>
+                    <td>66</td>
+                    <td>89</td>
+                    <td>86</td>
+                    <td>236</td>
+                    <td>222</td>
+                    <td>123</td>
+                    <td>222</td>
+                    <td>355</td>
+                </tr>
+                <tr>
+                    <td>Hoku TV 43'</td>
+                    <td>56</td>
+                    <td>23</td>
+                    <td>256</td>
+                    <td>889</td>
+                    <td>53</td>
+                    <td>23</td>
+                    <td>256</td>
+                    <td>569</td>
+                    <td>54</td>
+                    <td>125</td>
+                    <td>128</td>
+                    <td>698</td>
+                </tr>
+                <tr>
+                    <td>Home Theater</td>
+                    <td>58</td>
+                    <td>87</td>
+                    <td>56</td>
+                    <td>33</td>
+                    <td>28</td>
+                    <td>89</td>
+                    <td>108</td>
+                    <td>65</td>
+                    <td>169</td>
+                    <td>120</td>
+                    <td>34</td>
+                    <td>311</td>
+                </tr>
+                <tr>
+                    <td>Playstation 5</td>
+                    <td>236</td>
+                    <td>598</td>
+                    <td>523</td>
+                    <td>214</td>
+                    <td>458</td>
+                    <td>63</td>
+                    <td>258</td>
+                    <td>58</td>
+                    <td>29</td>
+                    <td>458</td>
+                    <td>698</td>
+                    <td>1268</td>
+                </tr>
+                <tr>
+                    <td>Xbox Series X</td>
+                    <td>256</td>
+                    <td>147</td>
+                    <td>26</td>
+                    <td>89</td>
+                    <td>58</td>
+                    <td>458</td>
+                    <td>52</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>269</td>
+                    <td>968</td>
+                    <td>235</td>
+                </tr>
+                <tr>
+                    <td>Xbox Series S</td>
+                    <td>563</td>
+                    <td>532</td>
+                    <td>225</td>
+                    <td>236</td>
+                    <td>458</td>
+                    <td>452</td>
+                    <td>123</td>
+                    <td>328</td>
+                    <td>463</td>
+                    <td>358</td>
+                    <td>598</td>
+                    <td>896</td>
+                </tr>
+                <tr>
+                    <td>Nitendo Switch</td>
+                    <td>12</td>
+                    <td>56</td>
+                    <td>8</td>
+                    <td>23</td>
+                    <td>5</td>
+                    <td>49</td>
+                    <td>12</td>
+                    <td>29</td>
+                    <td>38</td>
+                    <td>49</td>
+                    <td>156</td>
+                    <td>258</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

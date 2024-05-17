@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 01</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <form action="cadastro.php" autocomplete="off" method="post"> 
+        <!-- nesse caso action senve para dizer para onde esse dados vão, ou qual a ação que eu vou tomar quando eu enviar os dados -->
+        <!-- autocomplete, pode ter dois valores, e é literalmente para completar o preenchimento automaticamente "on", ou não permitir que isso aconteça "off"  -->
+        <!-- method vair permtir que os dados sejam ou não vizualizados na URL, o valor GET é o padrão e vai permitir que seja vizualizado na URL.
+            O valor POST não deixa isso visual, mas não é uma proteção de fato, mas ela esconde essa informação da URL, mas ainda sim esta salva.
+                POST: da uma sensação de proteção, recebe arquivos, maior capacidade de receber informações.
+                GET: não protege conteudos sensiveis (senhas, cartões), e seu conteudo não pode ultrapassar 3.000 bytes (3 mil letras).
+        -->
+        <p>
+            <label for="inome">Nome:</label>
+            <!-- sempre usar para dizer qual a relação entre a etiqueta e o objeto do formulário -->
+            <!-- faz com que o navegador entenda que o "nome" é a etiqueta "input" -->
+            <!-- nós ligamos isso dando um "id" no nosso "input" -->
+            <input type="text" name="nome" id="inome">
+            <!-- diferença entre:
+            name = é mais utilizado para HTML e para algumas linguagem como PHP
+            id = é ultilziado com uma importancia maior para LABEL  e JavaScript
+            -->
+        </p>
+        <p>
+            <label for="isobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+        <input type="submit" value="Enviar">
+        
+    </form>
+</body>
+</html>

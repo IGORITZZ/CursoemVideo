@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafio Tabela Complexa</title>
+</head>
+
+<body>
+    <!-- A TABELA TEM INICIO AQUI -->
+    <table>
+        <caption>BOLETIM</caption>
+        <!-- INCIO CABEÇALHO -->
+        <thead>
+            <!--<tr> table row (linha de tabela) cria uma linha para inserir <th> table header (cabeçalho da tabela) -->
+            <tr>
+                <th rowspan="2" scope="col">AREA</th>
+                <th rowspan="2" scope="col">DISCIPLINAS</th>
+                <th colspan="2" scope="colgroup">NOTAS</th>
+                <!-- somente notas precisa ultilizar duas colunas, para o "segundo" cabeçalho se encaixar -->
+                <th rowspan="2" scope="col">MÉDIA</th>
+            </tr>
+            <tr>
+                <!-- outro cabeçalho <tr> em separado, para cria uma seguinda linha -->
+                <!--  outro <tr> para criar mais uma linha -->
+                    <!-- Parte 2 dividida do header principal -->
+                <th>NOTA 1</th>
+                <th>NOTA 2</th>
+            </tr>
+            <!-- FINAL CABEÇALHO -->
+        </thead>
+        <!-- INICIO CORPO DA TABELA -->
+        <tbody>
+            <tr>
+                <!-- INCIO PRIMEIRA PARTE DO BOLETIM -->
+                <th rowspan="5" scope="rowgroup">EXATAS</th>
+                <!-- por mais que esteja ocupando 4 linhas, somente aceitou com 5. Deve ser pelo fato de usarmos dois <tr> no <theader> -->
+            </tr>
+            <tr>
+                <th scope="row" class="materia">MATEMÁTICA</th>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <th scope="row" class="materia">FÍSICA</th>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <th scope="row" class="materia">QUÍMICA</th>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <th scope="row" class="materia">BIOLOGIA</th>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <thead>
+                    <!-- MEDIA EXATAS -->
+                    <th colspan="4" scope="row" class="media">MÉDIAS EXATAS</th>
+                    <td class="nota_media">0.0</td>
+                </thead>
+                <!-- FIM DA PRIMEIRA PARTE DO BOLETIM -->
+            </tr>
+            <tr>
+                <!-- INICIO DA SEGUNDA PARTE DO BOLETIM -->
+                <th rowspan="3" scope="rowgroup">HUMANAS</th>
+            </tr>
+            <tr>
+                <th scope="row" class="materia">HISTÓRIA</th>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <th scope="row" class="materia">GEOGRAFIA</th>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <thead>
+                    <th colspan="4" scope="row" class="media">MÉDIAS HUMANAS</th>
+                    <td class="nota_media">0.0</td>
+                </thead>
+                <!-- FIM DA SEGUNDA PARTE DO BOLETIM -->
+            </tr>
+        </tbody>
+        <!-- FINAL DO CORPO DA TABELA -->
+    </table>
+    <!-- A TABELA ACABA AQUI -->
+</body>
+
+</html>

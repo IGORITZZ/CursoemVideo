@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 05</title>
+</head>
+
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <!-- Para radio, que normalmente seria uma escolha dentre as opções, "name" deve receber o mesmo valor -->
+            <!-- nas opções de RADIO colocar o valor "value" ajuda na leitura do dado na URL  -->
+            <label for="imas">
+                <input type="radio" name="sexo" id="imas" value="M"> Masculino 
+            </label> <br>
+            <label for="ifem">
+                <input type="radio" name="sexo" id="ifem" value="F"> Feminino
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <label for="iesfut">
+                <input type="checkbox" name="esfut" id="iesfut">Futebol 
+            </label> <br>
+            <label for="iesbas">
+                <input type="checkbox" name="esbas" id="iesbas">Basquete 
+            </label> <br>
+            <label for="iesvol">
+                <input type="checkbox" name="esvol" id="iesvol">Volei 
+            </label> <br>
+            <label for="ieshan">
+                <input type="checkbox" name="eshan" id="ieshan">Handbol
+            </label> <br>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Apagar">
+        </p>
+    </form>
+
+</body>
+
+</html>

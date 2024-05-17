@@ -1,0 +1,62 @@
+<!-- 
+    HIERARQUIA DE TABELA (simples)
+    TABLE = Tabela
+        TABLE ROW <tr> = Linha de Tabela
+            TABLE HEADER = Cabeçalho de Tabela
+            TABLE DATA <td> = Dado de Tabela
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 01</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 400px;
+            height: 400px;
+            border-collapse: collapse;
+            /* Essa propriedade nessa situição faz os dados da tabela <td> ficarem mais próximo, dando mais cara de uma tabela */
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center; /* Alinhamentos HORIZONTAIS: left center rigth*/
+            vertical-align: middle; /* Alinhamentos VERTICAIS: top middle bottom*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Minha primeira tabela</h1>
+    <table>
+        <tr> <!-- PRIMEIRA LINHA -->
+            <td>A1</td><!-- CÉLULA -->
+            <td>B1</td><!-- CÉLULA -->
+            <td>C1</td><!-- CÉLULA -->
+        </tr>
+        <tr><!-- SEGUNDA LINHA -->
+            <td>A2</td><!-- CÉLULA -->
+            <td>B2</td><!-- CÉLULA -->
+            <td>C2</td><!-- CÉLULA -->
+        </tr>
+        <tr><!-- TERCEIRA LINHA -->
+            <td>A3</td><!-- CÉLULA -->
+            <td class="amarelo">B3</td><!-- CÉLULA -->
+            <td>C3</td><!-- CÉLULA -->
+        </tr>
+        <tr><!-- QUARTA LINHA -->
+            <td>A4</td><!-- CÉLULA -->
+            <td class="amarelo">B4</td><!-- CÉLULA -->
+            <td>C4</td><!-- CÉLULA -->
+        </tr>
+    </table>
+</body>
+
+</html>

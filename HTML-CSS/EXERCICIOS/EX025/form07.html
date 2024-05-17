@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 07</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+          <p>
+            <label for="iest">Estado
+                <select name="est" id="iest">
+                    <optgroup label="Região Sudeste">
+                        <!-- optgroup serve para separar iteim de uma lista em gurpos -->
+                        <!-- label aqui é uma propriedade que da nome ao optgroup -->
+                        <option value="N/D" selected>Selcione</option>
+                        <!-- essa linha é para ser o padrão ao carregar pagina, já que a propriedade selected, vai sempre deixar o item aparecendo selecionado quando carregar a pagina -->
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="ES">Espirito Santo</option>
+                    </optgroup>
+                    <optgroup label="Região Norte/Nordeste">
+                        <option value="AM">Amazonas</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                    </optgroup>
+
+                </select>
+            </label>
+          </p>
+          <p>
+            <label for="ipro">Profissão
+                <input type="text" name="prof" id="ipro" list="ilistpro">
+                <datalist id="ilistpro">
+                    <!-- dessa forma se criar uma lista em um campo de texto -->
+                    <!-- digitar algumas letres de uma palavra que tenha nessa lista pode aparecer opções -->
+                    <!-- não é uma lista, apenas tem COMPORTAMENTO parecido -->
+                    <!-- é mais uma lista de dados do que uma lista de opções -->
+                    <option>Desenvolvedor</option>
+                    <option>Professor</option>
+                    <option>Agronomo</option>
+                </datalist>
+            </label>
+          </p>
+          <p>
+            <label for="imsg"> Mensagem <br>
+                <textarea name="msg" id="imsg" cols="40" rows="10" placeholder="Digite aqui sua Mensagem..."></textarea>
+                <!-- um campo de texto, e a propriedade placecholder faz aparecer uma meensagem na caixa de texto, que some ao começar a digitar -->
+            </label>
+          </p>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Apagar">
+        </p>
+    </form>
+</body>
+</html>

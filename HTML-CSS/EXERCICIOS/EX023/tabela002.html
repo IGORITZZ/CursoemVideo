@@ -1,0 +1,198 @@
+<!-- 
+    ANATOMIA DE GRANDES TABELAS
+    TABLE
+        CAPTION (Leganda da tabela)
+        THEAD
+            <tr>, <td>, <th>
+        TBODY
+            <tr>, <td>, Tth        
+        TFOOT
+            <tr>, <td>, <th>   
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 2</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+            /* configuração para fazer o top da tabela colar no topo ao rolar a pagina para baixo, não afeta em nada */
+        }
+        thead{
+            background-color: rgb(41, 40, 40);
+            color: white;
+        }
+        thead tr th {
+            position: sticky;
+            /* posicionamento "cola", faz o objeto colar ao todo qando a pagina é rolada para baixo */
+            top: 0px;
+            /* para que o objeto fique mesmo fixo precisamos alterar a relação do objeto com o "top" da página */
+            background-color: rgb(41, 40, 40);
+            /* adiconamos novamente cor de fundo, porque essa propriedade não é puxada junto ao objeto */
+        }
+        td,
+        th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        tbody > tr:nth-child(2n){
+            /* a pseudo classe :nth-child(2n) faz com que a cada 2 celular 1 seja pinada (2n), ou seja, vai ficar uma sim e outra não */
+            /* pode ser também valores como odd (impar) ou even (par), que vai dar o efeito parecido do criado*/
+            background-color: lightgray;
+        }
+        tfoot {
+            background-color: gray;
+            color: white;
+        }
+        .num{
+            text-align: right;
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">ESTADO</th>
+                <!-- Para deixar claro que os dados estão na mesma coluna de ESTADO, delcaramos scope="col", assim o HTML entende que os dados estão na mesma coluna -->
+                <th scope="col" style="width: 50px;">POPULAÇÃO</th>
+            </tr>
+        <tbody>
+            <tr>
+                <td>SÃO PAULO</td>
+                <td class="num">45.929.049</td>
+            </tr>
+            <tr>
+                <td>MINAS GERAIS</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+
+                <td>RIO DE JANEIRO</td>
+                <td class="num">17.264.943</td>
+            </tr>
+            <tr>
+                <td>BAHIA</td>
+                <td class="num">14.134.417</td>
+            </tr>
+            <tr>
+                <td>PARANÁ</td>
+                <td class="num">11.443.208</td>
+            </tr>
+            <tr>
+                <td>RIO GRANDE DO NORTE</td>
+                <td class="num">10.880.506
+                </td>
+            </tr>
+            <tr>
+                <td>PERNAMBUCO</td>
+                <td class="num">9.058.155</td>
+            </tr>
+            <tr>
+                <td>CEÁRA</td>
+                <td class="num">8.791.688</td>
+            </tr>
+            <tr>
+                <td>PARÁ</td>
+                <td class="num">8.116.132</td>
+            </tr>
+            <tr>
+                <td>SANTA CATARINA</td>
+                <td class="num">7.609.601</td>
+            </tr>
+            <tr>
+                <td>GOIÁS</td>
+                <td class="num">7.055.228</td>
+            </tr>
+            <tr>
+                <td>MARANHÃO</td>
+                <td class="num">6.775.152</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">3.974.495</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">3.941.175</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">3.833.486</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3.658.813</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num" class="num">3.302.406</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num" class="num">3.269.200 </td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num" class="num">3.127.511</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num" class="num">2.817.068</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2.756.700</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2.209.558</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1.581.016</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1.511.459</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">830.026</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">733.508</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">636.303</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th scope="row">TOTAL DE HABITANTES</th>
+            <!-- Para deixar claro que os dados estão na mesma linha de TOTAL DE HABITANTES, delcaramos scope="row", assim o HTML entende que os dados estão na mesma linha -->
+            <td class="num"><strong>210.147.125</strong></td>
+        </tfoot>
+        </thead>
+    </table>
+</body>
+
+</html>

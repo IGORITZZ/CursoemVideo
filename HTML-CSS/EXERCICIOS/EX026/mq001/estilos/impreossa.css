@@ -1,0 +1,43 @@
+
+@charset "UTF-8";
+/* PARA IMPRESSÃO */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background: lightgrey;
+}
+header h1{
+    text-align: center;
+    padding: 10px;
+    font-size: 2.3em;
+}
+
+menu{
+    display: none;
+}
+article{
+    width: 600px;
+    margin: auto;
+    display: block;
+    padding: 15px;
+    text-align: justify;
+
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    padding: 6px;
+    background-color: lightskyblue  ;
+    width: 100vw;
+    text-align: center;
+    font-size: 0.9em;
+    color: white;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+}

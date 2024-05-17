@@ -1,0 +1,62 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(251, 231, 99);
+    font-weight: bolder;
+}
+img{
+    width: 400px;
+}
+iframe{
+    width: 854px;
+    height: 480px;
+}
+#voltar{
+    width: 40px;
+}
+
+@media screen and (max-width: 854px) {
+    iframe{
+        width: 640px;
+        height: 360px;
+    }
+
+    body{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 550px){
+    iframe{
+        width: 310px;
+        height: 196px;
+    }
+
+    body{
+        text-align: center;
+    }
+    p{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 350px){
+    iframe{
+        width: 210px;
+        height: 146px;
+    }
+
+    body{
+        text-align: center;
+    }
+    p{
+        font-size: 8px;
+    }
+}

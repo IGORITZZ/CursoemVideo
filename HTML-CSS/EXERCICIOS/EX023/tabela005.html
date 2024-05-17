@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 05</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 500px;
+            border-collapse: collapse;
+        }
+        caption{
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 8px;
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 8px;
+        }
+        .amarelo{
+            background-color:   yellow;
+        }
+        .vermelho{
+            background-color: red;
+        }
+        .azul{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercicio de Tabela</h1>
+    <table>
+        <colgroup>
+            <!-- tag usada para poder estilizar uma coluna inteira, caso não usar esse metodo, tera que estilizar linha a linha de uma mesma coluna -->
+            <!-- dentro da tag <colgroup>, temos a tag <col>, e cada uma delas represena uma coluna inteira -->
+            <!-- se tivermos 3 colunas e 3 <col>, vamos estilizar as 3 colunas, se tivermos 3 colunas e 2 <col> vamos somente conseguir estilizar as duas primeira colunas -->
+            <!-- para estilizar duas colunas ao mesmo tempo, vamos usar o atributo  span="2", sendo o valor a receber o numero de colunas-->
+            <col class="amarelo" span="2">
+            <col class="vermelho">
+            <col class="azul">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornlista</td>
+        </tr>
+        <tr>
+            <td>Gustavo</td>
+            <td>M</td>
+            <td>28</td>
+            <td>Programador</td>
+        </tr>
+        <tr>
+            <td>Elvira</td>
+            <td>F</td>
+            <td>39</td>
+            <td>Diarista</td>
+        </tr>
+        <tr>
+            <td>Igor</td>
+            <td>M</td>
+            <td>25</td>
+            <td>Estudante</td>
+        </tr>
+        <tr>
+            <td>Cleide</td>
+            <td>F</td>
+            <td>20</td>
+            <td>Empresária</td>
+        </tr>
+        <tr>
+            <td>Jorge</td>
+            <td>M</td>
+            <td>36</td>
+            <td>Porteiro</td>
+        </tr>
+    </table>
+</body>
+</html>

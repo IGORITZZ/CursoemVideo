@@ -1,0 +1,209 @@
+@charset "UTF-8"; /* configuração para caracteres especiais */ 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /* link direto para carregar font */
+@font-face {
+   /* configuração para carregar fonte salva na máquina */
+   font-family: 'Android'; /* nome da font para usarmos na propriedade font-family */
+   src: url(./fontes/idroid.otf); /* link direto para a página encontar a font */
+   font-weight: normal; 
+}
+*{margin: 0; padding: 0;} /* propriedades gerais/mundiais */
+:root{
+   /* aqui salvamos todas as informações de cores e fontes diferentes em forma de "variaveis" */
+   /* variaveis tem que ser inciadas com o sina de -- */
+   --cor0: #C5EBD6;
+   --cor1: #83E1AD;
+   --cor2: #3DDC84;
+   --cor3: #2FA866;
+   --cor4: #1A5C37;
+   --cor5: #063D1E;
+   --fonte0: Arial, Verdana, Helvetica, sans-serif;
+   --fonte1: 'Bebas Neue', cursive; /* fonte carregada por link externo, o nome aqui se refere ao nome da fonte direto do link */
+   --fonte2: 'Android', sans-serif; /* fonte de link interno, o nome se refere ao nome que demos */
+}
+body{
+   /* todo o corpo da pagina tera uma font padrão para ser carregada em caso de erros */
+   font-family: var(--fonte0);
+   /* terá também uma cor, que virá parecer como que uma cor de fundo */
+   background-color: var(--cor0);
+}
+a.externo::after{
+   content: '\00A0\1F517';
+   /* basicamente vai adicinar algo após o texto carregar, sendo assim ::after (depois) content (conteudo), sera adicionado ao texto em questão */
+}
+header{
+   /* uma sombra será gerada, para dar aparecia de profundidade ao menu */
+   background-image: linear-gradient(to bottom, var(--cor2), var(--cor5));
+   /* o menu tera uma comprimento minimo para distanciar os elementos */
+   min-height: 150px;
+   /* todo o texto ira centralizar ao centro */
+   text-align: center;
+   
+}
+header > h1{
+   /* o sinal de > simboliza que todo h1 dentro de header levará essa configuração, outros h1 da página não serão afetados */
+   color: white;
+   font-family: var(--fonte1);
+   font-size: 3em;
+   padding-top: 40px;
+   margin-bottom: 20px;
+   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.361);
+}
+header > p {
+   color: white;
+   font-family: var(--fonte0);
+   font-size: 1.2em;
+   max-width: 600px;
+   margin: auto;
+   padding: 0 10px 10px 15px;
+   text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.665);
+}
+nav{
+   background-color: var(--cor5);
+   padding: 10px;
+   /* Realiza sombra do tipo box, dando impressão de pofundidade no elemento. */
+   /* Sombra criada pela janela do inspensionar */
+   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.308);
+}
+nav > a {
+   /* Aqui mudando todo o link que esta somente dentro de nav */
+   color: white;
+   padding: 10px;
+   text-decoration: none;
+   font-weight: bold;
+}
+nav > a:hover{
+   background-color: var(--cor3);
+   color: var(--cor5);
+   text-decoration: underline;
+   border-radius: 2px;
+   /* Essa opção faz uma breve transição para que o link se transforme */
+   transition-duration: .53s;
+}
+main{
+   background-color: white;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.26);
+   margin:auto;
+   margin-bottom: 30px;
+   /* para arrendondar os canto infeirores usamos essse tipo de configuração, mas poderia ser por meio de shorthands */
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   padding: 20px;
+   /* para tranformar nosso conteudo responsivo, informamos o tamanho minomo e máximo que nosso conteudo deverá ter, assim nos preocupamos em deixar tudo dentro do conteudo */
+   min-width: 300px;
+   max-width: 1000px;
+}
+main h1 {
+   color: var(--cor4);
+   font-family: var(--fonte2);
+}
+main h2 {
+   font-family: var(--fonte2);   
+   color: var(--cor4);
+   font-size: 1.3em;
+   /* além de darmos a dereção como de claração de valor + deg, podemos indicar a direção com "to rigth", por exemplo */
+   background-image: linear-gradient(to right, var(--cor0), transparent);
+   text-indent: 8px;
+}
+main p{
+   /* criando uma margim nas laterias apenas, já margin: 15(laterais), 0px(em cima ou em baixo) */
+   margin: 15px 0;
+   text-align: justify;
+   /* cria-se uma identação, uma margin unica somente para o paragrafo */
+   text-indent: 15px;
+   font-size: 1em;
+   /* funciona como o espaçamento entre linhas */
+   line-height: 1.5em;
+}
+main strong{
+   color: var(--cor4);
+   font-weight: bold;
+}
+main a{
+   text-decoration: none;
+   font-weight: bold;
+   color: var(--cor5);
+   background-color: var(--cor0);
+   padding: 2px 6px;
+   border-radius: 2px;
+}
+main a:hover{
+   color: var(--cor0);
+   background-color: var(--cor5);
+   text-decoration: underline 1px var(--cor0);
+   transition-duration: .5s;
+}
+main img{
+   width: 100%;
+}
+main img.pequena {
+   /* quando definimos um tamnho para imagem, ela por padrão precisa receber o valor display: block; para que assim posamos centralizar, já que uma imagem não é necessáriamente um bloco*/
+   max-width: 350px;
+   display: block;
+   margin: auto;
+}
+.video{ 
+   /* aqui demos um jeito para centralizar o video */
+   background-color: var(--cor5);
+   margin: 0 -20px 30px 0;
+   padding: 20px;
+   padding-bottom: 55.41%;
+   position: relative;
+}
+.video > iframe{ 
+   /* aqui ajustamos o tamanho do video para que ele fique centralizado e com a imagem do video */
+   position: absolute;
+   top: 5%;
+   left: 5%;
+   width: 90%;
+   height: 90%;
+}
+aside{
+   background-color: var(--cor1);
+   padding: 10px;
+   border-radius: 10px;
+   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.112);
+}
+aside > h3 {
+   background-color: var(--cor4);
+   color: white;
+   padding: 10px;
+   margin: -10px -10px 0 -10px;
+   border-radius: 10px 10px 0 0;
+}
+
+aside > ul{
+   /* position inside, é para que a lista fique dentro do elemento pai, que nesse caso é aside */
+   list-style-position: inside;
+   /* propriedade que faz com que a nossa lsita tenha apenas 2 colunas */
+   columns: 2;
+   /* código espeficos, 2705 faz um check, e 00A0 é para dar um espaço */
+   list-style-type: '\2705\00A0';
+}
+aside abbr {
+   text-decoration: none;
+}  
+aside abbr:hover {
+   text-decoration: underline 1px;
+   cursor: pointer;
+}  
+footer{
+   background-color: var(--cor5);
+   color: white;
+   font-size: 0.9em;
+   padding: 7px;
+   text-align: center;
+}
+footer a{
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+}
+footer a:hover{
+   text-decoration: underline;
+   color: var(--cor1);
+   transition-duration: 0.5s;
+}
+ 
+
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFRAME CADASTRO</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe{
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 2px;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="paginas-extras/pagina004.html" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer"></iframe>
+    <!-- sandbox="allow-same-origin" permite conteudos da mesma origem, ou seja, oque estiver no iframe estiver no mesmo servidor eu permito que colete dados -->
+    <!-- allow-forms vai permitir a coleta de dados de formulários -->
+    <!-- posso também dizer duas regras:  andbox="allow-same-origin allow-forms" aqui estou permitindo tudo da mesma origem e também os formulários -->
+    <!--  mas todo formulário também usa scripts, então  sandbox="allow-same-origin allow-forms allow-scripts" -->
+    <!-- sandbox="sandbox" bloqueia toda e qualquer ação que o site tenha para obter dados, como que de cadastro -->
+    <!-- referrerpolicy="no-referrer" estou informando que qaulquer conteudo que esteja no iframe não vai coletar nenhum tipo de dado do usuário -->
+</body>
+</html>

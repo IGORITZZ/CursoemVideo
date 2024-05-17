@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(108, 105, 105);
+}
+body{
+    background: url(../imagens/fundo-madeira.jpg) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main{
+    height: 100vh;
+    position: relative;
+}
+
+#telefone{
+    width: 311px;
+    height: 627px;
+    background: url(../imagens/frame-iphone.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#tela{
+    position: relative;
+    /* poscionamentor elatiovo ao elemento acima */
+    top: 80px;
+    left: 22px;
+    width: 265px;
+    height: 469px;
+    /* declarações feitas de forma manual para alinhar o elemento ao tamnho da tela */
+}
+#redes-sociais{
+    text-align: right;
+    /* alinho o texto a direta, assim os icones vão ficar à direita da pagina */
+}
+#redes-sociais > a > img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    /* imagens que são completamente quadras se tornam redondas apenas com essa declaração */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.300);
+    box-sizing: border-box;
+    /* não foi muito bem explicado, mas ao colocar uma borda quadno passamos os mouse, gera um espaçamento desnecessário entre os objetos como se a borda fosse um item a mais
+    box-sizing: border-box;, declarar dessa forma faz parecer que esta tudo no mesmo "box" */
+}
+#redes-sociais > a > img:hover{
+    padding: 2px;
+    border: 2px solid rgba(255, 255, 255, 0.612);
+    /* cria uma borda ao passar o mouse em cima do link */
+    transform: translate(-2px, -3px);
+    /* transform: translate, não serve somente para centralizar objetos, mas para movimentalos com mais liberdade pela tela */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.628);
+    /* cira-se uma sombra */
+    transition: transform .4s;
+    /* toda a mudança que ocorre com o elemento, vai passar por uma breve animaçao */
+    /* declaramos alem do termo a propriedade transform, para que a animação não perca o posicionamento original/final, não declarar isso deixa a animação estranha */
+}

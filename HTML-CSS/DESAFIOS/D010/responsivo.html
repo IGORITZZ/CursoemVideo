@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Responsividade</title>
+    <style>
+        body{
+            /* Cor de fundo da página. */
+            background-color: grey;
+        }
+        main{
+            /* Cor dentro do main, para criar um efeito de "area". */
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            /* Tamanho maximo e minimo, assim o conteudo se ajusta desde o minimo até o máximo, e mesmo que a tela seja maior que o conteudo, ao chegar no tamanho maximo, o conteudo fica estático. */
+            min-width: 300px;
+            max-width: 800px;
+            margin: auto;
+        }
+        img{
+            /* Define essa o tamanho maximo que a imagem sempre vai ocupar, no caso dentro de main. */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit placeat rem, modi nihil, dolore explicabo velit deleniti praesentium incidunt animi sit illo debitis, dolorum expedita quam impedit! Esse, ratione dignissimos. Lorem ipsum dolor, sit amet consectetur adipisicing elit. A quibusdam recusandae molestias totam aut veniam placeat dicta optio magnam, architecto impedit asperiores voluptates amet reiciendis qui, est ipsum libero laboriosam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus quos dolores vel, omnis ad facere suscipit quaerat, quam nihil possimus vitae velit maiores optio excepturi esse placeat. Adipisci, ducimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi recusandae dolorum eos sed, doloribus ipsam a dignissimos quaerat nisi distinctio dolores quis velit minus saepe sit placeat temporibus aperiam porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus, nesciunt eligendi necessitatibus error delectus accusamus asperiores tempore? Optio provident veritatis itaque accusamus fugit nobis suscipit, dolorum nostrum rerum commodi?
+        </p>
+        <picture>
+            <!-- Aqui se define que em <source> irá carregar uma imagem até a tela atingir a proproção de largura (max-width) de 600px -->
+            <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
+            <!-- Qundo a tela atingir um valor superior á 600px ira carregar a imagem da tag <img> -->
+            <img src="imagens/irina-blok.jpg" alt="">
+        </picture>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit placeat rem, modi nihil, dolore explicabo velit deleniti praesentium incidunt animi sit illo debitis, dolorum expedita quam impedit! Esse, ratione dignissimos. Lorem ipsum dolor, sit amet consectetur adipisicing elit. A quibusdam recusandae molestias totam aut veniam placeat dicta optio magnam, architecto impedit asperiores voluptates amet reiciendis qui, est ipsum libero laboriosam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus quos dolores vel, omnis ad facere suscipit quaerat, quam nihil possimus vitae velit maiores optio excepturi esse placeat. Adipisci, ducimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi recusandae dolorum eos sed, doloribus ipsam a dignissimos quaerat nisi distinctio dolores quis velit minus saepe sit placeat temporibus aperiam porro! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus, nesciunt eligendi necessitatibus error delectus accusamus asperiores tempore? Optio provident veritatis itaque accusamus fugit nobis suscipit, dolorum nostrum rerum commodi?
+        </p>
+    </main>
+</body>
+</html>

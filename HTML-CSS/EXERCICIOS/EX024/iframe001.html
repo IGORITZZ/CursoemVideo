@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de iframe</title>
+</head>
+<body>
+    <h1>Testando o uso de um iframe</h1>
+    <p>Acessando o site do 
+        <!-- basicamente o iframe é um quadro em linha -->
+        <!-- iframe dentro de uma pagina, serve somente para você ter a vizulização de uma outra pagina dentro do seu dominio sem quer que acessa-la po um link <a> -->
+        <!-- a tag <iframe> automaticamente recebe duas propriedades:
+        SRC para realizar a busca do site a ser vizualizado.
+            *NOTA, por motivos de segurança nem todos os sites deixam que você realize esse tipo de vizualização.
+        FRAMEBORDER literalmente é a borda do iframe, que só aceita dois valores, 1 (com borda) e 0 (sem borda).
+            *NOTA, para configurar a bora de maneira mais expecifica deverá ser feita por CSS pois qualquer valor acima de 1, não surte efeito
+        -->
+        <iframe src="https://www.cursoemvideo.com/" frameborder="0" scrolling="no">
+            <!-- a propriedade scrolling serve para que o iframe tenha 3 comportamentos dependendo do valor recebido
+                AUTO, tendo ou não nessidade de ter rolagem, essa decisão é automática
+                YES, idependente do tamanho do iframe sempre irá mostrar barra de rolagem
+                NO, idependente do tamanho do iframe, não terá barra de rolagem
+            -->
+            <!-- em caso do iframe não carregar, oque pode acontcer por motivos de segurança, colocamos dentro a tag <a> para no minimo gerar um link para mostrar -->
+            <a href="https://www.cursoemvideo.com/">CursoemVideo</a></iframe>
+    para aprender a programar</p>
+
+    <p>O repositorio do Guanabara<iframe src="https://github.com/gustavoguanabara/html-css" frameborder="0">
+        <a href="https://github.com/gustavoguanabara/html-css">GitHub</a>
+    </iframe>
+    também é legal.</p>
+</body>
+</html>

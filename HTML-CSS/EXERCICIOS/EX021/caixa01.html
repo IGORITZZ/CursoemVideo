@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1{ /* box-level/display block */
+            /*para mudar o tipo de dislplay, basta declarar a propriedade com a declaração display*/ 
+            display: inline;
+            background-color: lightgreen;
+            /* display inline não se confiura altura e largura*/
+            height: 300px;
+            width: 300px;
+
+            /* border-width: 10px;
+            border-style: solid;
+            border-color: darkslategray; */
+            border: 10px solid darkslategray;
+
+            /* padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px; */
+            padding: 10px 10px 10px 10px;
+            /*
+            padding: 10px; assim todos valores ficam iguais
+            padding: 10px 20px; assim em cima e baixo, e os dois lados ficam iguais 
+             */
+
+            /* margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px; */
+            margin: 10px auto 10px auto;
+
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon; 
+            outline: 5px dashed salmon;
+        }
+        a{ /* online-level/display inline */
+            display: block;
+            /* border-width: 10px;
+            border-style: solid;
+            border-color: red; */
+            border: 10px solid red;
+            /* padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px; */
+            padding: 10px;
+            /* margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px; */
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona</p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 06</title>
+</head>
+
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+
+            <p>
+                <label for="icor">Cor
+                    <input type="color" name="cor" id="icor">
+                </label>
+            </p>
+
+            <p>
+                <label for="inevel">Nível de Satisfação
+                    <input type="range" name="nivel" id="inevel" min="0" max="10" value="0">
+                    <!-- min e max definem o tamanho e quantidade de valores na nossa babrra -->
+                    <!-- value define o valor inicial da nossa barra -->
+                </label>
+            </p>
+
+            <p>
+                <label for="ifoto">Foto
+                    <input type="file" name="foto" id="ifoto">
+                    <!-- como o input:file é para envio de dados, semprem vamos utilizar o  method="post" -->
+                </label>
+            </p>
+            
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Apagar">
+            </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>
