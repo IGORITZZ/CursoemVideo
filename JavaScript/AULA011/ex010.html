@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição Composta</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <input type="number" name="nvel" id="nvel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular(){
+            var nvel = document.querySelector('#nvel')
+            var vel = Number(nvel.value)
+            var texto = document.querySelector('#res')
+            texto.innerHTML = `<p>Sua velocidade é de <strong>${vel}</strong></p>`
+            if ( vel > 60 ) {
+                texto.innerHTML += '<p>Você está <strong>MULTADO</strong>!</p>'
+            }
+            texto.innerHTML += `<p>Dirija com cuidado!</p>`
+        }
+    </script>
+
+</body>
+</html>

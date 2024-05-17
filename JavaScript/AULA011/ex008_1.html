@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - EX008</title>
+</head>
+<body>
+    <h1>Sistemas de Multas</h1>
+    <input type="number" name="tveloc" id="tveloc">
+    <input type="button" value="Resultado" onclick="multar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function multar(){
+            var vel = document.querySelector('#tveloc')
+            var nvel = Number(vel.value)
+            var text = document.querySelector('#res')
+            text.innerHTML = `<p>Sua velocidade é de <strong>${nvel}Km/h</strong></p>`
+            if ( nvel > 60 ) {
+                text.innerHTML += `<p>Você está acima da velocidade. <strong>MULTADO</strong>!</p>`
+            }
+            text.innerHTML += `Dirija com cuidado!`
+        }
+    </script>
+</body>
+</html>
