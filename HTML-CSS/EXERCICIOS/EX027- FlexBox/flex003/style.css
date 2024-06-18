@@ -1,0 +1,17 @@
+.conteiner{
+    background-color: lightsalmon;
+
+    display: flex;
+    flex-flow: row wrap;
+    /* flex-flow é uma shortline para flex-wrap e flex-direction, ressumindo assim o numero de linhas no código */
+}
+.item{
+    background-color: lightblue;
+    border: 1px solid black;
+    text-align: center;
+    flex: auto;
+    /*  flex: auto; consiste em deixar todo o conteudo de forma preenchida sem criar quebras de linhas desproporcionais ou bagunçadas
+    só é póssivel declarar em elementos filhos
+    também é uma shortline
+    */
+}
