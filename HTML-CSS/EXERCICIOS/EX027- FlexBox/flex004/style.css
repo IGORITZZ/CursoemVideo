@@ -1,0 +1,17 @@
+.conteiner{
+    background-color: lightsalmon;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    /* 
+        flex-flow: row nowrap; e justify-content: flex-start; seriam os valores padrões para o inicio da página
+    */
+}
+.item{
+    background-color: lightblue;
+    border: 1px solid black;
+    text-align: center;
+
+
+}

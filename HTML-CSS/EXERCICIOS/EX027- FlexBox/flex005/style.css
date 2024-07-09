@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightblue;
+}
+main{
+    background-color: lightgreen;
+    width: 90vw;
+    height: 90vh;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    background-color: lightseagreen;
+    height: 200px;
+    width: 200px;
+}
