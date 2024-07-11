@@ -8,8 +8,8 @@ body{
 }
 main{
     background-color: lightgreen;
-    width: 90vw;
-    height: 90vh;
+    width: 100vw;
+    height: 100vh;
 
     display: flex;
     flex-flow: row nowrap;
