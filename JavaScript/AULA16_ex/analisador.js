@@ -1,14 +1,14 @@
 let num = document.querySelector('#fnum')
-let lista = document.querySelector('#flista')
+let flista = document.querySelector('#flista')
 let res = document.querySelector('#res')
-let valores = []
+let lista = []
 
 function adicionar(){
-    if(isNumero(num.value) && !inLista(num.value, valores)){
-        valores.push(Number(num.value))
+    if(isNumero(num.value) && !inLista(num.value, lista)){
+     lista.push(Number(num.value))
         let item = document.createElement('option')
         item.innerText = `Você adcionou o valor: ${num.value}`
-        lista.appendChild(item)
+        flista.appendChild(item)
         res.innerHTML = ''
     } else {
         alert('valor inválido')
@@ -34,26 +34,27 @@ function inLista(n, l){
 }
 
 function finalizar(){
-    if (valores.length == 0){
-        alert('[ERRO] Adicione valores antes de continuar!')
+    if(lista.length == 0){
+        alert('[ERRO] Adicione lista antes de continuar!')
     } else {
-        let tot = valores.length
-        let maior = valores[0]
-        let menor = valores[0]
+        let tot = lista.length
+        let maiornumero = lista[0]
+        let menornumero = lista[0]
         let soma = 0
         let media = 0
-        for (pos of valores){
-            soma += pos
-            if (pos > maior)
-                maior = pos
-            if (pos < menor)
-                menor = pos
+        for (valor of lista){
+            soma += valor
+            // ou pode ser descrita dessa forma soma = soma + valor
+            if (valor > maiornumero)
+                maiornumero = valor
+            if (valor < menornumero)
+                menornumero = valor
         }
         media = soma / tot  
         res.innerHTML = ''
         res.innerHTML += `<p>O total de valores é: ${tot}</p>`
-        res.innerHTML += `<p>O maior valor é: ${maior}</p>`
-        res.innerHTML += `<p>O menor valor é: ${menor}</p>`
+        res.innerHTML += `<p>O maior valor é: ${maiornumero}</p>`
+        res.innerHTML += `<p>O menor valor é: ${menornumero}</p>`
         res.innerHTML += `<p>A soma dos valores é: ${soma}</p>`
         res.innerHTML += `<p>A média dos valores é: ${media}</p>`
     }
