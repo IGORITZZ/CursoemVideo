@@ -1,0 +1,19 @@
+.conteiner{
+    background-color: lightsalmon;
+
+    display: flex;
+}
+.item{
+    background-color: lightblue;
+    border: 1px solid black;
+    text-align: center;
+
+    flex: auto;
+}
+#a1{order: 4;}
+#a2{order: 1;}
+#a3{order: -6;}
+#a4{order: 0;}
+#a5{order: -3;}
+#a6{order: 3;}
+#a7{order: 0;}
