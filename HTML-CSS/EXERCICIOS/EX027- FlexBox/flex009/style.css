@@ -1,20 +1,13 @@
 .conteiner{
     background-color: lightsalmon;
-    height: 400px;
+
     display: flex;
+    flex-flow: row nowrap;
 }
 .item{
-    background-color: orange;
+    background-color: lightblue;
     border: 1px solid black;
     text-align: center;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
+
+    flex-basis: auto;
 }
-#a1{align-self: center;}
-#a2{}
-#a3{}
-#a4{}
-#a5{}
-#a6{}
-#a7{}
