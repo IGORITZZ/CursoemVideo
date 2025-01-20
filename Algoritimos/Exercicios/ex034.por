@@ -3,9 +3,8 @@ programa
 	
 	funcao inicio()
 	{
-		cadeia nome
 		real peso, altura, imc
-		escreva("Qual a sua altura (Ex: 170): ")
+		escreva("Qual a sua altura (Ex: 1.70): ")
 		leia(altura)
 		escreva("Qual o seu peso (Ex: 65.8): ")
 		leia(peso)
@@ -17,10 +16,10 @@ programa
 		} senao se (imc > 18.5 e imc < 25){
 			escreva("O calculo do seu IMC é " + imc)
 			escreva("\nSendo assim, voce está no PESO IDEAL.")
-		} senao se (imc == 25 e imc < 30){
+		} senao se (imc >= 25 e imc < 30){
 			escreva("O calculo do seu IMC é " + imc)
 			escreva("\nSendo assim, voce está com SOBREPESO.")
-		} senao se (imc == 30 e imc < 40){
+		} senao se (imc >= 30 e imc < 40){
 			escreva("O calculo do seu IMC é " + imc)
 			escreva("\nSendo assim, voce está na OBESIDADE.")
 		} senao se (imc >= 40){
